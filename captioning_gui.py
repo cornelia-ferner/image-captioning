@@ -14,8 +14,8 @@ class MainWindow:
         # self.window_size = (1700, 800)  # for highres screen
         # self.canvas_size = (1280, 729)  # for highres screen
         # self.baseheight = 150  # for highgres screen
-        self.window_size = (1300, 750)
-        self.canvas_size = (870, 496)
+        self.window_size = (1300, 730)
+        self.canvas_size = (870, 510)
         self.baseheight = 102
         self.beam_size = 4
         self.seqlen = 16
