@@ -11,8 +11,10 @@ from transformers import VisionEncoderDecoderModel, ViTFeatureExtractor, AutoTok
 class MainWindow:
     def __init__(self):
         ## SETTINGS
+        # self.window_size = (1700, 800)  # for highres screen
         # self.canvas_size = (1280, 729)  # for highres screen
-        # self.baseheight = 150
+        # self.baseheight = 150  # for highgres screen
+        self.window_size = (1156, 544)
         self.canvas_size = (870, 496)
         self.baseheight = 102
         self.beam_size = 4
@@ -117,7 +119,7 @@ class MainWindow:
 
 
         layout = [[sg.TabGroup([[tab1, tab2]], tab_location="topleft")]]
-        self.window = sg.Window("Captioning Bot", layout, size=(1700, 800), finalize=True, background_color="#e2dfde",
+        self.window = sg.Window("Captioning Bot", layout, size=self.window_size, finalize=True, background_color="#e2dfde",
                                 icon="FHSalzburg_Logo.ico")
 
 
