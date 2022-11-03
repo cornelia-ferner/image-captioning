@@ -174,7 +174,7 @@ class MainWindow:
                             end_y = self.end_point[1]
                         self.start_point = (start_x, start_y)
                         self.end_point = (end_x, end_y)
-                        self.curr_im = self.orig_im.crop((self.start_point[0], 728 - self.start_point[1], self.end_point[0], 728 - self.end_point[1]))
+                        self.curr_im = self.orig_im.crop((self.start_point[0], self.canvas_size[1] - self.start_point[1], self.end_point[0], self.canvas_size[1] - self.end_point[1]))
                         if float(self.curr_im.size[1]) > 0:
                             hpercent = (self.baseheight / float(self.curr_im.size[1]))
                             wsize = int((float(self.curr_im.size[0]) * float(hpercent)))
