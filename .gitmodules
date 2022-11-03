@@ -1,0 +1,3 @@
+[submodule "vit-gpt2-image-captioning"]
+	path = vit-gpt2-image-captioning
+	url = ./vit-gpt2-image-captioning
