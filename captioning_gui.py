@@ -66,7 +66,7 @@ class MainWindow:
     def run(self):
         ## DEFINE LAYOUT
         col = [[sg.Text(textwrap.fill("Wähle mit der Maus einen Bereich im Bild aus und klicke auf \"Beschreibung\".", 22),
-                        key="-CAPTION-", size=(65, 4), font="Fira_Sans 24 italic", pad=((0, 0), (50, 0)))],
+                        key="-CAPTION-", size=(65, 4), font="Fira_Sans 24 italic", pad=((0, 0), (10, 0)))],
                [sg.Image(data=self.get_img_data(self.fp_easy, first=True), size=(200, self.baseheight), key="-SNIPPET-")],
                [sg.Button('BESCHREIBUNG', key="GENERATE!", size=(15, 3), font="Fira_Sans 12 bold")],
                [sg.HorizontalSeparator(pad=((0, 0), (25, 25)))],
