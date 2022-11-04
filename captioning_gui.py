@@ -11,12 +11,13 @@ from transformers import VisionEncoderDecoderModel, ViTFeatureExtractor, AutoTok
 class MainWindow:
     def __init__(self):
         ## SETTINGS
-        # self.window_size = (1700, 800)  # for highres screen
-        # self.canvas_size = (1280, 729)  # for highres screen
-        # self.baseheight = 150  # for highgres screen
-        self.window_size = (1300, 700)
-        self.canvas_size = (870, 600)
-        self.baseheight = 102
+        self.window_size = (1700, 800)  # for highres screen
+        self.canvas_size = (1280, 729)  # for highres screen
+        self.baseheight = 150  # for highgres screen
+        # self.window_size = (1300, 700)
+        # self.canvas_size = (870, 600)
+        # self.baseheight = 102
+
         self.beam_size = 4
         self.seqlen = 16
 
@@ -69,13 +70,13 @@ class MainWindow:
                         key="-CAPTION-", size=(65, 4), font="Fira_Sans 24 italic", pad=((0, 0), (10, 0)))],
                [sg.Image(data=self.get_img_data(self.fp_easy, first=True), size=(200, self.baseheight), key="-SNIPPET-")],
                [sg.Button('BESCHREIBUNG', key="GENERATE!", size=(15, 3), font="Fira_Sans 12 bold")],
-               [sg.HorizontalSeparator(pad=((0, 0), (10, 10)))],
+               [sg.HorizontalSeparator(pad=((0, 0), (25, 25)))],
                [sg.Text("SCHWIERIGKEIT", size=(40, 1), font="Fira_Sans 12 bold")],
                [sg.Radio('einfach', 1, enable_events=True, key='radio_easy', default=True, text_color='black', font="Fira_Sans 12 bold")],
                [sg.Text('Mit Bildern wie diesem wurde die KI trainiert.', key='text_easy', size=(40, 1), font="Fira_Sans 12 italic")],
                [sg.Radio('schwer', 1, enable_events=True, key='radio_hard', text_color='black', font="Fira_Sans 12 bold")],
                [sg.Text("", key='text_hard', size=(40, 3), font="Fira_Sans 12 italic")],
-               [sg.HorizontalSeparator(pad=((0, 0), (10, 10)))],
+               [sg.HorizontalSeparator(pad=((0, 0), (25, 25)))],
                [sg.Text("(c) 2022, Cornelia Ferner", key="copyright", font="Fira_Sans 10", size=(60, 1),
                         pad=((220, 0), (0, 0)))]]
         tab1 = sg.Tab("Demo",
