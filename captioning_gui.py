@@ -11,12 +11,12 @@ from transformers import VisionEncoderDecoderModel, ViTFeatureExtractor, AutoTok
 class MainWindow:
     def __init__(self):
         ## SETTINGS
-        self.window_size = (1700, 800)  # for highres screen
-        self.canvas_size = (1280, 729)  # for highres screen
-        self.baseheight = 150  # for highgres screen
-        # self.window_size = (1300, 700)
-        # self.canvas_size = (870, 600)
-        # self.baseheight = 102
+        # self.window_size = (1700, 800)  # for highres screen
+        # self.canvas_size = (1280, 729)  # for highres screen
+        # self.baseheight = 150  # for highgres screen
+        self.window_size = (1360, 800)
+        self.canvas_size = (940, 700)
+        self.baseheight = 120
 
         self.beam_size = 4
         self.seqlen = 16
